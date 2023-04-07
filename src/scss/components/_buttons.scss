@@ -1,0 +1,13 @@
+@use '../base' as *;
+
+button {
+  text-align: center;
+  text-transform: uppercase;
+  padding: 20px 40px;
+  font-family: $font-primary;
+  font-weight: 400;
+  font-size: 1.125rem;
+  line-height: 27px;
+  letter-spacing: 0.08rem;
+  cursor: pointer;
+}
