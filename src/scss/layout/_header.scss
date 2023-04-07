@@ -1,0 +1,44 @@
+$icons: (facebook, instagram, pinterest, twitter, youtube);
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 50px;
+  background-color: var(--color-primary-100);
+
+  ul {
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
+  }
+
+  nav {
+    width: 45%;
+    text-transform: uppercase;
+
+    ul {
+      justify-content: space-between;
+    }
+
+    a {
+      &:hover {
+        border-bottom: 2px solid var(--color-primary-500);
+      }
+    }
+  }
+
+  .social__networks {
+    a {
+      display: block;
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  @each $icon in $icons {
+    .icon-#{$icon} {
+      background-image: url(../../src/assets/icons/#{$icon}.svg);
+    }
+  }
+}
