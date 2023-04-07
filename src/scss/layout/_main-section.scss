@@ -13,7 +13,7 @@
   height: 742px;
   color: var(--color-primary-100);
 
-  .inner-content {
+  &__inner {
     width: 100%;
     display: flex;
     align-items: flex-end;
@@ -67,7 +67,7 @@
   @media (min-width: 450px) and (max-width: 979.9px) {
     background-image: url(../../src/assets/img/main-img-948x948.png);
 
-    .inner-content {
+    &__inner {
       padding-right: 100px;
     }
   }
@@ -76,7 +76,7 @@
     justify-content: flex-end;
     background-image: url(../../src/assets/img/main-img-1920x948.png);
 
-    .inner-content {
+    &__inner {
       width: 50%;
       align-items: flex-start;
 
@@ -96,7 +96,8 @@
       position: absolute;
       bottom: 0;
       left: 0;
-      font-size: 204px;
+      font-size: 9.5rem;
+      line-height: 0.93;
       text-transform: uppercase;
       -webkit-text-stroke: 2px rgba($color: #fff, $alpha: 0.24);
       color: transparent;
