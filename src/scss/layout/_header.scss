@@ -7,7 +7,7 @@ header {
   z-index: 999;
   width: 100%;
   position: relative;
-  padding: 30px 50px;
+  padding: 5px 0;
 
   nav {
     position: absolute;
@@ -60,6 +60,7 @@ header {
   @media screen and (min-width: 850px) {
     display: grid;
     grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
+    padding: 30px 50px;
 
     .logo__container {
       grid-column: 1;
