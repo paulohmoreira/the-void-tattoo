@@ -1,0 +1,139 @@
+@use '../base' as *;
+
+.clip {
+  background: url(../../src/assets/img/01.png);
+  // background-attachment: fixed;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-repeat: no-repeat;
+}
+
+.about {
+  background: var(--color-primary-100);
+  padding: 83px 25px;
+
+  .number-img {
+    display: none;
+    position: relative;
+  }
+
+  &__story {
+    display: flex;
+    text-align: left;
+    flex-direction: column;
+  }
+
+  h2 {
+    color: var(--color-primary-500);
+    font-weight: 400;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+
+  p {
+    font-family: $font-secondary;
+    color: var(--color-secondary-400);
+    font-size: 1rem;
+    line-height: 33px;
+    padding-left: 27px;
+  }
+
+  button {
+    background: transparent;
+    border: none;
+    position: relative;
+    width: 120px;
+    padding: 0;
+    margin: 30px auto 0;
+
+    &::after {
+      content: '';
+      position: absolute;
+      right: -20px;
+      top: 30%;
+      background: url(../../src/assets/icons/arrow-right-black.svg);
+      display: block;
+      width: 14px;
+      height: 11px;
+    }
+  }
+
+  @media (min-width: 450px) and (max-width: 979.9px) {
+    padding: 83px 50px;
+  }
+
+  @media (min-width: 980px) {
+    &__inner {
+      display: grid;
+      grid-template-columns: 2fr minmax(400px, 1fr);
+      align-items: center;
+      justify-items: start;
+      padding: 83px 0;
+    }
+
+    .clip {
+      background-position: 10% 25%;
+    }
+
+    .number-img {
+      grid-column: 1;
+      display: block;
+      font-family: $font-tertiary;
+      font-size: 32rem;
+      margin-top: -220px;
+    }
+
+    &__story {
+      grid-column: 2;
+    }
+
+    h2 {
+      font-size: 4rem;
+      margin-left: -40px;
+      margin-bottom: 38px;
+    }
+
+    p {
+      padding-right: 40px;
+    }
+
+    p:has(+ button) {
+      margin-bottom: 38px;
+    }
+
+    button {
+      margin: 0;
+      text-align: left;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .clip {
+      background-position: -18% 18%;
+    }
+
+    .number-img {
+      font-size: 40rem;
+    }
+
+    p {
+      padding-left: 0;
+    }
+
+    h2 {
+      margin-left: -80px;
+    }
+  }
+
+  @media screen and (min-width: 1400px) {
+    &__inner {
+      grid-template-columns: 2fr minmax(600px, 1fr);
+    }
+
+    h2 {
+      font-size: 4.725rem;
+    }
+  }
+}
