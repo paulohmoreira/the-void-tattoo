@@ -1,0 +1,189 @@
+@use '../base' as *;
+
+.skills {
+  background: var(--color-primary-100);
+  padding: 150px 10px;
+}
+
+.skills__list {
+  ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  li {
+    .skill {
+      font-weight: 300;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      display: block;
+      text-align: center;
+      margin-top: 20px;
+
+      @media screen and (min-width: 800px) {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  // Percentage of each circle
+  $circles-percentage: (90, 80, 75, 95);
+  @each $value in $circles-percentage {
+    $i: index($circles-percentage, $value);
+    $value: $value * 3.6;
+    .circle-#{$i} {
+      background: conic-gradient(var(--color-primary-200) #{$value}deg, var(--color-primary-100) 0deg);
+    }
+  }
+
+  .circle-progress {
+    position: relative;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &::before {
+      content: '';
+      position: absolute;
+      height: 148px;
+      width: 148px;
+      border-radius: 50%;
+      background-color: var(--color-primary-100);
+    }
+
+    &__inner {
+      position: relative;
+      font-size: 2rem;
+      font-weight: 400;
+      color: var(--color-primary-500);
+      border: 5px solid var(--color-primary-200);
+      width: 88%;
+      height: 88%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+    }
+
+    span {
+      font-weight: 200;
+    }
+
+    @media screen and (min-width: 800px) {
+      height: 200px;
+      width: 200px;
+
+      &::before {
+        height: 198px;
+        width: 198px;
+      }
+
+      &__inner {
+        font-size: 3rem;
+        width: 90%;
+        height: 90%;
+      }
+    }
+  }
+}
+
+.reviews {
+  margin-top: 50px;
+  position: relative;
+
+  nav {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+
+  button {
+    border: none;
+    background: transparent;
+    padding: 0;
+    width: 35px;
+    height: 25px;
+  }
+
+  button + button {
+    margin-left: 20px;
+  }
+
+  @media screen and (min-width: 800px) {
+    max-width: 800px;
+    margin: 100px auto;
+
+    nav {
+      bottom: 10px;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    max-width: 1150px;
+
+    nav {
+      bottom: 15px;
+    }
+
+    button + button {
+      margin-right: 50px;
+    }
+  }
+}
+
+.reviews__card {
+  display: flex;
+  margin-top: 100px;
+
+  .quotes {
+    font-family: $font-tertiary;
+    font-size: 5.5rem;
+    color: var(--color-primary-200);
+    margin-top: -18px;
+  }
+
+  p {
+    font-family: $font-secondary;
+    font-size: 1rem;
+    line-height: 160%;
+    color: var(--color-primary-500);
+    padding-left: 5px;
+
+    span {
+      display: block;
+      margin-top: 20px;
+      font-family: $font-primary;
+      font-size: 0.875rem;
+      font-weight: 300;
+      text-transform: capitalize;
+
+      strong {
+        font-weight: 600;
+      }
+    }
+  }
+
+  @media screen and (min-width: 1000px) {
+    margin-top: 200px;
+
+    .quotes {
+      font-size: 18rem;
+      margin-top: -50px;
+    }
+
+    p {
+      font-size: 2rem;
+      padding-left: 44px;
+
+      span {
+        font-size: 1.35rem;
+        margin-top: 50px;
+      }
+    }
+  }
+}
