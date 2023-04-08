@@ -1,0 +1,72 @@
+.gallery {
+  width: 100%;
+
+  h2 {
+    font-weight: 400;
+    font-size: 4.7rem;
+    color: var(--color-primary-500);
+    text-transform: uppercase;
+    line-height: 1.1;
+    margin: 150px 0 75px 310px;
+
+    @media screen and (max-width: 800px) {
+      margin: 100px 0 75px 100px;
+      font-size: 3rem;
+    }
+
+    @media screen and (max-width: 450px) {
+      margin: 83px 25px 25px;
+      font-size: 2rem;
+    }
+  }
+
+  button {
+    margin: 75px auto;
+    background-color: var(--color-primary-500);
+    color: var(--color-primary-100);
+    border: none;
+    position: relative;
+    padding-right: 60px;
+    font-size: 1rem;
+    display: block;
+
+    &::after {
+      content: '';
+      position: absolute;
+      right: 35px;
+      top: 40%;
+      background: url(../../src/assets/icons/arrow-right.svg);
+      display: block;
+      width: 14px;
+      height: 11px;
+    }
+  }
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 5px;
+}
+
+.column {
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 5px;
+
+  img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+  }
+
+  @media screen and (max-width: 800px) {
+    flex: 50%;
+    max-width: 50%;
+  }
+
+  @media screen and (max-width: 600px) {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
