@@ -1,0 +1,128 @@
+@use '../base' as *;
+
+.video {
+  background: url(../../src/assets/img/video-thumbnail-mobile.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 844px;
+
+  p {
+    font-family: $font-tertiary;
+    font-size: 2rem;
+    text-align: right;
+    text-transform: capitalize;
+    padding: 80px 30px 0 0;
+    color: var(--color-primary-100);
+  }
+
+  .button-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 30px 30px 0 10px;
+
+    div {
+      width: 91px;
+      height: 91px;
+      background-color: transparent;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba($color: #fff, $alpha: 0.4);
+    }
+  }
+
+  button {
+    position: relative;
+    background: var(--color-primary-100);
+    width: 75px;
+    height: 75px;
+    border: none;
+    border-radius: 50%;
+    padding-left: 24px;
+
+    .triangle {
+      position: relative;
+      background-color: var(--color-primary-500);
+      text-align: left;
+      display: block;
+
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        background-color: inherit;
+      }
+
+      &,
+      &::before,
+      &::after {
+        width: 1em;
+        height: 1em;
+        border-top-right-radius: 30%;
+      }
+
+      & {
+        transform: rotate(30deg) skewX(-30deg) scale(1, 0.866);
+      }
+
+      &::before {
+        transform: rotate(-135deg) skewX(-45deg) scale(1.414, 0.707) translate(0, -50%);
+      }
+
+      &::after {
+        transform: rotate(135deg) skewY(-45deg) scale(0.707, 1.414) translate(50%);
+      }
+    }
+  }
+
+  span {
+    color: var(--color-primary-100);
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    margin-left: 10px;
+    letter-spacing: 0.1rem;
+  }
+
+  @media screen and (min-width: 800px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(../../src/assets/img/video-thumbnail.png);
+    background-repeat: no-repeat;
+    background-position-x: 50%;
+
+    p {
+      width: 600px;
+      text-align: left;
+      padding: 0;
+      font-size: 2.5rem;
+    }
+
+    .button-wrapper {
+      justify-content: flex-start;
+      margin: 33px 0;
+
+      button {
+        padding-left: 14px;
+      }
+    }
+
+    span {
+      margin-left: 20px;
+      font-size: 1rem;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    justify-content: flex-start;
+    padding-left: 150px;
+
+    p {
+      width: 950px;
+      font-size: 3.35rem;
+      line-height: 1.2;
+    }
+  }
+}
