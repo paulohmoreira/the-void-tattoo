@@ -1,0 +1,59 @@
+@use '../base' as *;
+
+.articles {
+  background-color: var(--color-primary-100);
+  padding: 150px 0;
+  color: var(--color-primary-500);
+  font-family: $font-secondary;
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+  }
+
+  &__heading {
+    display: block;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 0.875rem;
+    margin-bottom: 16px;
+    font-family: $font-primary;
+    padding-left: 10px;
+  }
+
+  h3 {
+    font-weight: 500;
+    font-size: 0.875rem;
+    margin-bottom: 10px;
+  }
+
+  img {
+    max-width: 300px;
+    display: block;
+    margin-bottom: 32px;
+  }
+
+  .date {
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--color-secondary-300);
+  }
+
+  @media screen and (min-width: 800px) {
+    padding: 164px 0;
+
+    &__heading {
+      font-size: 1rem;
+    }
+
+    h3 {
+      font-size: 1.05rem;
+    }
+
+    img {
+      max-width: 400px;
+    }
+  }
+}
