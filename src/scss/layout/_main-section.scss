@@ -6,7 +6,7 @@
   width: 100%;
   display: flex;
   align-items: center;
-  background-image: url(../../src/assets/img/main-img-440x782.png);
+  background: var(--color-primary-500) url(../../src/assets/img/main-img-440x782.png);
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
@@ -52,7 +52,7 @@
         position: absolute;
         right: 30px;
         top: 40%;
-        background: url(../../src/assets/icons/arrow-right.svg);
+        background: var(--color-primary-500) url(../../src/assets/icons/arrow-right.svg);
         display: block;
         width: 14px;
         height: 11px;
@@ -65,7 +65,7 @@
   }
 
   @media (min-width: 450px) and (max-width: 979.9px) {
-    background-image: url(../../src/assets/img/main-img-948x948.png);
+    background: var(--color-primary-500) url(../../src/assets/img/main-img-948x948.png);
 
     &__inner {
       padding-right: 100px;
@@ -74,7 +74,7 @@
 
   @media (min-width: 980px) {
     justify-content: flex-end;
-    background-image: url(../../src/assets/img/main-img-1920x948.png);
+    background: var(--color-primary-500) url(../../src/assets/img/main-img-1920x948.png);
 
     &__inner {
       width: 50%;

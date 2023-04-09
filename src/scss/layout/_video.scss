@@ -1,7 +1,7 @@
 @use '../base' as *;
 
 .video {
-  background: url(../../src/assets/img/video-thumbnail-mobile.png);
+  background: var(--color-primary-500) url(../../src/assets/img/video-thumbnail-mobile.png);
   background-repeat: no-repeat;
   background-size: cover;
   height: 844px;
@@ -89,7 +89,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url(../../src/assets/img/video-thumbnail.png);
+    background: var(--color-primary-500) url(../../src/assets/img/video-thumbnail.png);
     background-repeat: no-repeat;
     background-position-x: 50%;
 
