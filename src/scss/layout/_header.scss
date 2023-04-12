@@ -87,7 +87,7 @@ header {
       a {
         opacity: 1;
 
-        &::after {
+        &.nav-item::after {
           content: '';
           display: block;
           height: 2px;
