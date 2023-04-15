@@ -1,0 +1,182 @@
+@use '../base' as *;
+
+$icons-link: (maps, phone, email);
+
+.footer {
+  font-family: $font-secondary;
+  color: var(--color-secondary-200);
+  background: var(--color-primary-400);
+
+  h4 {
+    text-transform: uppercase;
+    font-family: $font-primary;
+    font-size: 1rem;
+    letter-spacing: 0.08em;
+    font-weight: 500;
+    color: var(--color-primary-100);
+    margin-bottom: 25px;
+  }
+
+  p {
+    font-family: $font-secondary;
+    font-size: 0.9rem;
+    font-weight: 400;
+    line-height: 30px;
+    margin-bottom: 20px;
+    max-width: 310px;
+  }
+
+  a,
+  li {
+    font-size: 1rem;
+    color: var(--color-secondary-200);
+    line-height: 40px;
+  }
+
+  &__container {
+    padding: 50px 25px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: baseline;
+    gap: 50px 50px;
+  }
+
+  @media screen and (min-width: 768px) {
+    &__container {
+      padding: 100px 25px;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    h4 {
+      font-size: 1.125rem;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+
+    &__container {
+      display: flex;
+      justify-content: space-evenly;
+      gap: 0;
+    }
+  }
+}
+
+.footer__about {
+  @each $icon in $icons-link {
+    .#{$icon}-white {
+      &::before {
+        content: '';
+        position: absolute;
+        background: url(../../src/assets/icons/#{$icon}-white.svg);
+        display: block;
+        left: 0;
+
+        @if $icon == 'maps' {
+          width: 10px;
+          height: 16px;
+        } @else if $icon == 'phone' {
+          width: 15px;
+          height: 15px;
+        } @else {
+          width: 16px;
+          height: 14px;
+        }
+      }
+    }
+  }
+
+  &-list li,
+  button {
+    font-family: $font-secondary;
+    font-size: 0.9rem;
+  }
+
+  &-list li {
+    font-weight: 600;
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 25px;
+    line-height: 18px;
+  }
+
+  a {
+    color: var(--color-seconday-200);
+    line-height: 18px;
+  }
+}
+
+.footer__sitemap {
+  li {
+    text-transform: capitalize;
+  }
+}
+
+.footer__newsletter {
+  max-width: 310px;
+
+  form {
+    width: 100%;
+    height: 35px;
+
+    border-bottom: 1px solid var(--color-secondary-400);
+    display: flex;
+    justify-content: space-between;
+  }
+
+  input {
+    font-family: $font-secondary;
+    font-style: italic;
+    font-size: 0.9rem;
+    color: var(--color-secondary-200);
+    background: transparent;
+    border: none;
+    padding-bottom: 15px;
+    position: relative;
+
+    &::placeholder {
+      color: var(--color-secondary-200);
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  button[type='submit'] {
+    all: unset;
+    cursor: pointer;
+  }
+}
+
+.copyright {
+  padding: 35px 25px;
+  border-top: 1px solid var(--color-primary-300);
+
+  p {
+    font-size: 0.885rem;
+    max-width: 100%;
+    margin-bottom: 0;
+  }
+
+  strong {
+    color: var(--color-primary-100);
+    font-weight: 600;
+  }
+
+  a {
+    color: var(--color-primary-100);
+    font-weight: 700;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-left: 95px;
+  }
+}
