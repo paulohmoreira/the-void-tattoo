@@ -153,10 +153,13 @@
     line-height: 160%;
     color: var(--color-primary-500);
     padding-left: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 200px;
 
     span {
       display: block;
-      margin-top: 20px;
       font-family: $font-primary;
       font-size: 0.875rem;
       font-weight: 300;
@@ -179,11 +182,37 @@
     p {
       font-size: 2rem;
       padding-left: 44px;
+      height: 300px;
 
       span {
         font-size: 1.35rem;
-        margin-top: 50px;
       }
+    }
+  }
+}
+
+.carousel {
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  &__viewport {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 100%;
+  }
+
+  .snaps-inline {
+    scroll-snap-type: inline mandatory;
+
+    & > * {
+      scroll-snap-align: start;
+      scroll-padding-inline: 1rem;
     }
   }
 }
