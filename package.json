@@ -1,7 +1,7 @@
 {
   "name": "the-void-tattoo",
   "version": "1.0.0",
-  "description": "",
+  "description": "Landing page for a tattoo professional share his work",
   "main": "index.js",
   "scripts": {
     "dev": "parcel src/index.html --open",
@@ -9,7 +9,7 @@
   },
   "keywords": [],
   "author": "Paulo Moreira",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "parcel-bundler": "^1.12.5",
     "sass": "^1.60.0"
