@@ -5,7 +5,9 @@
 
 # The Void Tattoo
 
-![demo]()
+![demo](https://user-images.githubusercontent.com/16468584/233081905-5659c672-2581-465b-a548-4827a72fe778.gif)
+
+<br>
 
 - [Descrição](#descrição-do-projeto)
 - [Status do Projeto](#status-do-projeto)
@@ -18,6 +20,9 @@
 ## Descrição do Projeto
 
 Landing page para divulgação e exposição de portifólio de uma pessoa tatuadora, com foco em performance, acessibilidade e SEO. Esse foi meu primeiro contato com SASS em aplicação começando completamente do zero, tenho certeza que muitos dos seus benefícios acabaram não sendo implementados por isso. Para ambiente de desenvolvimento e build utilizei o [Parcel](https://parceljs.org/), e como o foco da aplicação é desempenho, não fiz o uso de bibliotecas externas (exceto Normalize.css, que instalei como dependência). O carrossel foi feito com Javascript Vanilla - recentemente descobri que o carrossel pode ser implementado com apenas HTML e CSS, porém achei que é um código difícil de compreender e implementar para uma funcionalidade muito simples.
+
+![desktop](https://user-images.githubusercontent.com/16468584/233063458-eb075707-dccf-403e-9c6a-397f1665a2a2.png)
+![mobile](https://user-images.githubusercontent.com/16468584/233076653-121b7455-d5d0-4420-956c-86508c0ad2b7.png)
 
 <br>
 
