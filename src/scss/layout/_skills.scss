@@ -206,13 +206,4 @@
     grid-auto-flow: column;
     grid-auto-columns: 100%;
   }
-
-  .snaps-inline {
-    scroll-snap-type: inline mandatory;
-
-    & > * {
-      scroll-snap-align: start;
-      scroll-padding-inline: 1rem;
-    }
-  }
 }
