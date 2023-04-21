@@ -1,6 +1,11 @@
 .gallery {
   width: 100%;
 
+  img {
+    height: auto;
+    width: 100%;
+  }
+
   h2 {
     font-weight: 400;
     font-size: 4.7rem;
