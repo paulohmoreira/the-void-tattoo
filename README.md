@@ -22,7 +22,8 @@
 Landing page para divulgação e exposição de portifólio de uma pessoa tatuadora, com foco em performance, acessibilidade e SEO. Esse foi meu primeiro contato com SASS em aplicação começando completamente do zero, tenho certeza que muitos dos seus benefícios acabaram não sendo implementados por isso. Para ambiente de desenvolvimento e build utilizei o [Parcel](https://parceljs.org/), e como o foco da aplicação é desempenho, não fiz o uso de bibliotecas externas (exceto Normalize.css, que instalei como dependência). O carrossel foi feito com Javascript Vanilla - recentemente descobri que o carrossel pode ser implementado com apenas HTML e CSS, porém achei que é um código difícil de compreender e implementar para uma funcionalidade muito simples.
 
 ![desktop](https://user-images.githubusercontent.com/16468584/233063458-eb075707-dccf-403e-9c6a-397f1665a2a2.png)
-![mobile](https://user-images.githubusercontent.com/16468584/233076653-121b7455-d5d0-4420-956c-86508c0ad2b7.png)
+![mobile](https://user-images.githubusercontent.com/16468584/233661733-719c9478-e9bf-4103-a531-f91fdddbc8fb.png)
+
 
 <br>
 
@@ -30,7 +31,7 @@ Landing page para divulgação e exposição de portifólio de uma pessoa tatuad
 
 ![Badge em Desenvolvimento](http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge)
 
-- [ ] Elevar a performance mobile (atualmente 88 || meta: mínimo 90)
+- [x] Elevar a performance mobile (<s>atualmente 88</s> || meta: mínimo 90)
 - [ ] Aprimorar qualidade e implementar metódo de compressão das imagens
 - [ ] Aprimorar a experiência do usuário
 - [ ] Refatorar código
