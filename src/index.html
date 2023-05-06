@@ -27,14 +27,27 @@
     /></noscript>
 
     <script src="./js/carousel.js" defer></script>
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js" defer></script>
+    <!-- Initialize Swiper -->
+    <script src="./js/swiper.js" defer></script>
+
     <title>The Void Tattoo</title>
   </head>
   <body>
     <header>
       <div class="logo__container">
-        <img src="assets/img/the-void-tattoo-logo.webp" alt="brand logo" width="188" height="90"
-        srcset="assets/img/the-void-tattoo-logo.webp 188w, assets/img/the-void-tattoo-logo-1.webp 282w"
-        sizes="(max-width: 768px) 282px, 188px" />
+        <img
+          src="assets/img/the-void-tattoo-logo.webp"
+          alt="brand logo"
+          width="188"
+          height="90"
+          srcset="assets/img/the-void-tattoo-logo.webp 188w, assets/img/the-void-tattoo-logo-1.webp 282w"
+          sizes="(max-width: 768px) 282px, 188px"
+        />
       </div>
       <label for="nav-toggle" class="nav-toggle__label" aria-label="Menu">
         <span></span>
@@ -104,6 +117,54 @@
           check my <br />
           gallery:
         </h2>
+        <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper gallery-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="./assets/img/gallery-01.webp" alt="Portrait of a man with a hand tattoo" loading="lazy" />
+              <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="./assets/img/gallery-02.webp"
+                alt="Close-up of a woman displaying an arm tattoo"
+                loading="lazy"
+              />
+              <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/img/gallery-03.webp" alt="Man with a striking tattoo on his arm" loading="lazy" />
+              <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/img/gallery-04.webp" alt="Intricate tattoo on the left hand of a man" loading="lazy" />
+              <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/img/gallery-05.webp" alt="Woman with an elegant neck tattoo" loading="lazy" />
+              <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/img/gallery-06.webp" alt="Back tattoo on a man with intricate design" loading="lazy" />
+              <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/img/gallery-07.webp" alt="Tattoo on the left arm of a man with style" loading="lazy" />
+              <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="./assets/img/gallery-08.webp"
+                alt="Woman with a sophisticated tattoo on her left arm"
+                loading="lazy"
+              />
+              <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+            </div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+
         <div class="row">
           <div class="column">
             <img
