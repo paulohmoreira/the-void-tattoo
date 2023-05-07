@@ -24,7 +24,6 @@ Landing page para divulgação e exposição de portifólio de uma pessoa tatuad
 ![desktop](https://user-images.githubusercontent.com/16468584/233063458-eb075707-dccf-403e-9c6a-397f1665a2a2.png)
 ![mobile](https://user-images.githubusercontent.com/16468584/233661733-719c9478-e9bf-4103-a531-f91fdddbc8fb.png)
 
-
 <br>
 
 ## Status do Projeto
@@ -32,6 +31,7 @@ Landing page para divulgação e exposição de portifólio de uma pessoa tatuad
 ![Badge em Desenvolvimento](http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge)
 
 - [x] Elevar a performance mobile (<s>atualmente 88</s> || meta: mínimo 90)
+- [ ] Adicionar gestão de conteúdo via spreadsheet
 - [ ] Aprimorar qualidade e implementar metódo de compressão das imagens
 - [ ] Aprimorar a experiência do usuário
 - [ ] Refatorar código
@@ -40,7 +40,7 @@ Landing page para divulgação e exposição de portifólio de uma pessoa tatuad
 
 ## ⚙️ Funcionalidades
 
-Landing page para divulgação e contato de trabalho, com apresentação, galeria, seção para
+Landing page para divulgação e contato de trabalho, com gestão de conteúdo, apresentação, galeria, seção para
 vídeo, artigos e formas de contato.
 
 <br>
