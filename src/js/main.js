@@ -1,4 +1,5 @@
 import { transformData } from './data-converter';
+import { createCarousel } from './carousel';
 
 getData();
 
@@ -22,6 +23,9 @@ async function getData() {
   // Render the data fetched from the spreadsheet
   renderGallery(dataValue.gallery);
   renderReviews(dataValue.reviews);
+
+  // Active carousel on the reviews section
+  createCarousel();
 }
 
 /**
