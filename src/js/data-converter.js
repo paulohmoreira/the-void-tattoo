@@ -18,7 +18,7 @@ export function transformData(arr) {
         result[type] = [];
         for (let i = 0; i < args.length; i += 3) {
           const [content, author, role] = args.slice(i, i + 3);
-          result[type].push({ Content: content, author, role });
+          result[type].push({ content, author, role });
         }
         break;
       case 'video':
