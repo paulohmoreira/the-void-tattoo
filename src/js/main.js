@@ -21,6 +21,7 @@ async function getData() {
 
   // Render the data fetched from the spreadsheet
   renderGallery(dataValue.gallery);
+  renderReviews(dataValue.reviews);
 }
 
 /**
@@ -48,4 +49,30 @@ function changeGalleryImages(element, images) {
       img.src = images[index];
     });
   }
+}
+
+function renderReviews(reviews) {
+  const reviewsCardWrapper = document.querySelector('.reviews .carousel');
+  if (!reviewsCardWrapper) return;
+
+  let data = '';
+  const carouselViewport = document.createElement('div');
+  carouselViewport.classList.add('carousel__viewport', 'snaps-inline');
+  carouselViewport.ariaLabel = 'Reviews Carousel';
+
+  reviews.forEach((review, index) => {
+    data += `
+        <div id="carousel__slide${index + 1}" class="carousel__slide" role="group" aria-label="slide ${index + 1} of ${
+      reviews.length
+    }">
+          <p>
+            ${review.content}
+            <span><strong>${review.author} </strong>| ${review.role}</span>
+          </p>
+        </div>
+    `;
+  });
+
+  carouselViewport.innerHTML = data;
+  reviewsCardWrapper.appendChild(carouselViewport);
 }
